@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+  <TargetFramework Condition="'$(NoFramework)' == 'false' AND '$(TargetFrameworkOverride)' == '' AND '$(hasFrameworkProp)' == 'false'">net9.0</TargetFramework>
+    <TargetFramework Condition="'$(NoFramework)' == 'false' AND '$(TargetFrameworkOverride)' != '' AND '$(hasFrameworkProp)' == 'false'">TargetFrameworkOverride</TargetFramework>
+    <TargetFrameworks Condition="'$(NoFramework)' == 'false' AND '$(TargetFrameworkOverride)' == '' AND '$(hasFrameworkProp)' == 'true'">$(FrameworkProp)</TargetFrameworks>
+    <RootNamespace Condition="'$(RootNamespaceOverride)' != ''">RootNamespaceOverride</RootNamespace>
+    <RootNamespace Condition="'$(RootNamespaceOverride)' == '' AND '$(name)' != '$(name{-VALUE-FORMS-}safe_namespace)'">Gnome.Library</RootNamespace>
+    <LangVersion Condition="'$(langVersion)' != ''">$(ProjectLanguageVersion)</LangVersion>
+    <ImplicitUsings Condition="'$(csharpFeature_ImplicitUsings)' == 'true'">enable</ImplicitUsings>
+    <Nullable Condition="'$(csharpFeature_Nullable)' == 'true'">enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" />
+    <PackageReference Include="GnomeStack.Xunit.Core" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="Microsoft.TestPlatform.ObjectModel" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+  </ItemGroup>
+  
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+</Project>

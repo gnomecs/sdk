@@ -4,6 +4,30 @@ bash := if os_family() == 'windows' {
     '/usr/bin/env bash'
 }
 
+new-std NAME:
+    #!{{bash}}
+    export DOTNET_ROOT="$HOME/.dotnet"
+    dotnet new gnome-stdlib -n "Gnome.{{ NAME }}" -o "./src/{{ NAME }}" \
+        --license \
+        --changelog \
+        --no-framework \
+        --use-icon-prop \
+        --polyfill 
+    dotnet sln . add "./src/{{ NAME }}"
+
+new-unsafe NAME:
+    #!{{bash}}
+    export DOTNET_ROOT="$HOME/.dotnet"
+    dotnet new gnome-stdlib -n "Gnome.{{ NAME }}" -o "./src/{{ NAME }}" \
+        --license \
+        --changelog \
+        --no-framework \
+        --polyfill \
+        --unsafe \
+        --use-icon-prop \
+        --no-restore
+    dotnet sln add "./src/{{ NAME }}"
+
 add-migration MIGRATION: 
     #!{{bash}}
     export DOTNET_ROOT="$HOME/.dotnet"
