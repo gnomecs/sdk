@@ -1,6 +1,6 @@
 using System.Buffers;
 
-namespace Gnome.Secrets;
+namespace Gnome.Extensions.Secrets;
 
 /// <summary>
 /// Represents a secret value that is stored in memory. It does not guarantee that
