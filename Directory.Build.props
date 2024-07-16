@@ -50,10 +50,10 @@
     
     <!-- for cases when netstandard2.0 is not supported, but functionality is supported in net472 or greater -->
     <NetStableLibFx>$(NetFx);$(StableLibFx)</NetStableLibFx>
-    <NetStableLibTestFx>$(StableFx);$(NetFx)</NetStableLibTestFx>
+    <NetStableLibTestFx>$(StableLibFx);$(NetFx)</NetStableLibTestFx>
+
 
     <TargetFrameworks>$(LibFx)</TargetFrameworks>
-
     <Windows>false</Windows>
     <Linux>false</Linux>
     <MacOs>false</MacOs>

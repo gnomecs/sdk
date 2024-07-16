@@ -53,6 +53,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Security.Cryptography
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Security.Cryptography.Tests", "lib\Security.Cryptography\test\Gnome.Security.Cryptography.Tests.csproj", "{E50992B0-4349-4C7D-8969-A9095BC79391}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security.Cryptography.X509Certificates", "Security.Cryptography.X509Certificates", "{15876DD8-F8B0-4677-A198-EECD09ADD9D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Security.Cryptography.X509Certificates", "lib\Security.Cryptography.X509Certificates\src\Gnome.Security.Cryptography.X509Certificates.csproj", "{4FF51874-7403-4712-B710-A7828BA455B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Security.Cryptography.X509Certificates.Tests", "lib\Security.Cryptography.X509Certificates\test\Gnome.Security.Cryptography.X509Certificates.Tests.csproj", "{A05D4EAF-0114-4537-BB56-11B85D980BD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,6 +132,14 @@ Global
 		{E50992B0-4349-4C7D-8969-A9095BC79391}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E50992B0-4349-4C7D-8969-A9095BC79391}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E50992B0-4349-4C7D-8969-A9095BC79391}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FF51874-7403-4712-B710-A7828BA455B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FF51874-7403-4712-B710-A7828BA455B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FF51874-7403-4712-B710-A7828BA455B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FF51874-7403-4712-B710-A7828BA455B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A05D4EAF-0114-4537-BB56-11B85D980BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A05D4EAF-0114-4537-BB56-11B85D980BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A05D4EAF-0114-4537-BB56-11B85D980BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A05D4EAF-0114-4537-BB56-11B85D980BD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D291C8AB-507B-42B6-BACF-710AC33F359A} = {1BD553E6-381F-4B0F-907E-B72630F75A57}
@@ -152,5 +166,8 @@ Global
 		{309E6B63-8C12-4878-A754-6BC854248806} = {1BD553E6-381F-4B0F-907E-B72630F75A57}
 		{862D38DF-3412-4C14-B96F-D89485A768FA} = {309E6B63-8C12-4878-A754-6BC854248806}
 		{E50992B0-4349-4C7D-8969-A9095BC79391} = {309E6B63-8C12-4878-A754-6BC854248806}
+		{15876DD8-F8B0-4677-A198-EECD09ADD9D9} = {1BD553E6-381F-4B0F-907E-B72630F75A57}
+		{4FF51874-7403-4712-B710-A7828BA455B6} = {15876DD8-F8B0-4677-A198-EECD09ADD9D9}
+		{A05D4EAF-0114-4537-BB56-11B85D980BD3} = {15876DD8-F8B0-4677-A198-EECD09ADD9D9}
 	EndGlobalSection
 EndGlobal
