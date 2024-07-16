@@ -52,6 +52,11 @@ new-unsafe NAME:
         --no-restore
     dotnet sln add "./src/{{ NAME }}"
 
+buildp PROJ:
+    #!{{bash}}
+    export DOTNET_ROOT="$HOME/.dotnet"
+    dotnet build "./lib/{{ PROJ }}/src"
+
 add-migration MIGRATION: 
     #!{{bash}}
     export DOTNET_ROOT="$HOME/.dotnet"
