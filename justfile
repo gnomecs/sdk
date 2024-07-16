@@ -13,6 +13,7 @@ add-ref PROJ REF:
     #!{{bash}}
     export DOTNET_ROOT="$HOME/.dotnet"
     dotnet add "./lib/{{ PROJ }}/src" reference "./lib/{{ REF }}/src"
+    dotnet sln "./lib/{{ PROJ }}"  add  "./lib/{{ REF }}/src"
 
 add-test-ref PROJ REF:
     #!{{bash}}

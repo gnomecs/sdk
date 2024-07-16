@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Colors.Primitives", "src\Gnome.Colors.Primitives.csproj", "{4A97FD62-271F-40EF-85CF-64C734176549}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Colors.Primitives.Tests", "test\Gnome.Colors.Primitives.Tests.csproj", "{80C1B37B-F49C-4B1C-B21F-B6FCCDE8D731}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A97FD62-271F-40EF-85CF-64C734176549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A97FD62-271F-40EF-85CF-64C734176549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A97FD62-271F-40EF-85CF-64C734176549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A97FD62-271F-40EF-85CF-64C734176549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80C1B37B-F49C-4B1C-B21F-B6FCCDE8D731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80C1B37B-F49C-4B1C-B21F-B6FCCDE8D731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80C1B37B-F49C-4B1C-B21F-B6FCCDE8D731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80C1B37B-F49C-4B1C-B21F-B6FCCDE8D731}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
