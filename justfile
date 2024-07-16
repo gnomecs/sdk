@@ -9,7 +9,15 @@ new-xunit NAME:
     export DOTNET_ROOT="$HOME/.dotnet"
     dotnet new gnome-xunit -n "Gnome.{{ NAME }}.Tests" -o "./lib/{{ NAME }}/tests" --force
    
-   
+add-ref PROJ REF:
+    #!{{bash}}
+    export DOTNET_ROOT="$HOME/.dotnet"
+    dotnet add "./lib/{{ PROJ }}/src" reference "./lib/{{ REF }}/src"
+
+add-test-ref PROJ REF:
+    #!{{bash}}
+    export DOTNET_ROOT="$HOME/.dotnet"
+    dotnet add "./lib/{{ PROJ }}/tests" reference "./lib/{{ REF }}/src"
 
 new-std NAME:
     #!{{bash}}
