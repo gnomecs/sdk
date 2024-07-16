@@ -60,6 +60,7 @@
     <RootDir>$(MSBuildThisFileDirectory.TrimEnd("/"))</RootDir>
     <SrcDir>$(RootDir)/src</SrcDir>
     <InternalDir>$(MSBuildThisFileDirectory)lib/Internal/src</InternalDir>
+    <SysDir>$(MSBuildThisFileDirectory)lib/Sys/src</SysDir>
     <ArtifactsDir>$(MSBuildThisFileDirectory).artifacts</ArtifactsDir>
     <IconPath>$(MSBuildThisFileDirectory)assets/icon.png</IconPath>
     <NetLegacy>false</NetLegacy>
