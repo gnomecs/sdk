@@ -77,6 +77,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Extensions.Secrets", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Extensions.Secrets.Tests", "lib\Extensions.Secrets\test\Gnome.Extensions.Secrets.Tests.csproj", "{7AED6E24-7965-4D3A-AE0E-46946FC8996D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions.Logging.Abstractions", "Extensions.Logging.Abstractions", "{913D50CF-B1CF-4869-B6B1-1CC470D1938D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Extensions.Logging.Abstractions", "lib\Extensions.Logging.Abstractions\src\Gnome.Extensions.Logging.Abstractions.csproj", "{9F26BF67-2D61-4838-AB82-E6D0D86AFD36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Extensions.Logging.Abstractions.Tests", "lib\Extensions.Logging.Abstractions\test\Gnome.Extensions.Logging.Abstractions.Tests.csproj", "{81AC344B-F8AC-461C-A2C4-6C3105A36ABD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -182,6 +188,14 @@ Global
 		{7AED6E24-7965-4D3A-AE0E-46946FC8996D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AED6E24-7965-4D3A-AE0E-46946FC8996D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AED6E24-7965-4D3A-AE0E-46946FC8996D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F26BF67-2D61-4838-AB82-E6D0D86AFD36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F26BF67-2D61-4838-AB82-E6D0D86AFD36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F26BF67-2D61-4838-AB82-E6D0D86AFD36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F26BF67-2D61-4838-AB82-E6D0D86AFD36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81AC344B-F8AC-461C-A2C4-6C3105A36ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81AC344B-F8AC-461C-A2C4-6C3105A36ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81AC344B-F8AC-461C-A2C4-6C3105A36ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81AC344B-F8AC-461C-A2C4-6C3105A36ABD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D291C8AB-507B-42B6-BACF-710AC33F359A} = {1BD553E6-381F-4B0F-907E-B72630F75A57}
@@ -220,5 +234,8 @@ Global
 		{204FA5AC-56DB-4207-A1DB-A72F42E1CE1F} = {1BD553E6-381F-4B0F-907E-B72630F75A57}
 		{6F696AB0-391A-4D8B-B102-7417E8965666} = {204FA5AC-56DB-4207-A1DB-A72F42E1CE1F}
 		{7AED6E24-7965-4D3A-AE0E-46946FC8996D} = {204FA5AC-56DB-4207-A1DB-A72F42E1CE1F}
+		{913D50CF-B1CF-4869-B6B1-1CC470D1938D} = {1BD553E6-381F-4B0F-907E-B72630F75A57}
+		{9F26BF67-2D61-4838-AB82-E6D0D86AFD36} = {913D50CF-B1CF-4869-B6B1-1CC470D1938D}
+		{81AC344B-F8AC-461C-A2C4-6C3105A36ABD} = {913D50CF-B1CF-4869-B6B1-1CC470D1938D}
 	EndGlobalSection
 EndGlobal
