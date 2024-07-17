@@ -83,6 +83,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Extensions.Logging.Ab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Extensions.Logging.Abstractions.Tests", "lib\Extensions.Logging.Abstractions\test\Gnome.Extensions.Logging.Abstractions.Tests.csproj", "{81AC344B-F8AC-461C-A2C4-6C3105A36ABD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions.Hosting.CommandLine", "Extensions.Hosting.CommandLine", "{0F1BE808-677F-4033-A81D-545BBA474060}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Extensions.Hosting.CommandLine", "lib\Extensions.Hosting.CommandLine\src\Gnome.Extensions.Hosting.CommandLine.csproj", "{3FDB893A-373B-411B-B285-1F0922FD9518}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Extensions.Hosting.CommandLine.Tests", "lib\Extensions.Hosting.CommandLine\test\Gnome.Extensions.Hosting.CommandLine.Tests.csproj", "{BD3793CB-FE1E-4B7B-B3C1-29E0C70A9FEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -196,6 +202,14 @@ Global
 		{81AC344B-F8AC-461C-A2C4-6C3105A36ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81AC344B-F8AC-461C-A2C4-6C3105A36ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81AC344B-F8AC-461C-A2C4-6C3105A36ABD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FDB893A-373B-411B-B285-1F0922FD9518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FDB893A-373B-411B-B285-1F0922FD9518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FDB893A-373B-411B-B285-1F0922FD9518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FDB893A-373B-411B-B285-1F0922FD9518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD3793CB-FE1E-4B7B-B3C1-29E0C70A9FEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD3793CB-FE1E-4B7B-B3C1-29E0C70A9FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD3793CB-FE1E-4B7B-B3C1-29E0C70A9FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD3793CB-FE1E-4B7B-B3C1-29E0C70A9FEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D291C8AB-507B-42B6-BACF-710AC33F359A} = {1BD553E6-381F-4B0F-907E-B72630F75A57}
@@ -237,5 +251,8 @@ Global
 		{913D50CF-B1CF-4869-B6B1-1CC470D1938D} = {1BD553E6-381F-4B0F-907E-B72630F75A57}
 		{9F26BF67-2D61-4838-AB82-E6D0D86AFD36} = {913D50CF-B1CF-4869-B6B1-1CC470D1938D}
 		{81AC344B-F8AC-461C-A2C4-6C3105A36ABD} = {913D50CF-B1CF-4869-B6B1-1CC470D1938D}
+		{0F1BE808-677F-4033-A81D-545BBA474060} = {1BD553E6-381F-4B0F-907E-B72630F75A57}
+		{3FDB893A-373B-411B-B285-1F0922FD9518} = {0F1BE808-677F-4033-A81D-545BBA474060}
+		{BD3793CB-FE1E-4B7B-B3C1-29E0C70A9FEB} = {0F1BE808-677F-4033-A81D-545BBA474060}
 	EndGlobalSection
 EndGlobal
