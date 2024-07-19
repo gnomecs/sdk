@@ -1,0 +1,20 @@
+using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.Contracts;
+using System.Runtime.CompilerServices;
+
+namespace Gnome.Extensions.Application;
+
+internal static class StringExtensions
+{
+    /// <summary>
+    /// Indicates whether or not the <see cref="string"/> value is null, empty, or white space.
+    /// </summary>
+    /// <param name="source">The source string.</param>
+    /// <returns><see langword="true" /> if the <see cref="string"/>
+    /// is null, empty, or white space; otherwise, <see langword="false" />.
+    /// </returns>
+    [Pure]
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool IsNullOrWhiteSpace([NotNullWhen(false)] this string? source)
+        => string.IsNullOrWhiteSpace(source);
+}
