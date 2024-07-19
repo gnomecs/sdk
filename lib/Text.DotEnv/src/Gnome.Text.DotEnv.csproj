@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">  
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>Gnome.Text.DotEnv</PackageTags>
+    <Description>
+    Gnome.Text.DotEnv
+    </Description>
+    <PackageReleaseNotes Condition="Exists('$(MSBuildProjectDirectory)/CHANGELOG.md')">
+      $([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/CHANGELOG.md"))
+    </PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Condition="Exists('README.md')" Include="README.md" Pack="true" PackagePath="\"/>
+    <None Condition="Exists('LICENSE.md')" Include="LICENSE.md" Pack="true" PackagePath="\"/>
+    <None Condition="Exists('$(IconPath)')" Include="$(IconPath)" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Polyfill" />
+  </ItemGroup>
+
+   <ItemGroup Condition="'$(NetLegacy)' == 'true'">
+    <PackageReference Include="System.Memory" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="$(SysDir)/Sys/Memory/SpanExtensions.AsString.cs" Link="Sys/Memory/SpanExtensions.AsString.cs" />
+    <Compile Include="$(SysDir)/Sys/EnvVariablesExpander.cs" Link="Sys/EnvVariablesExpander.cs" />
+    <Compile Include="$(SysDir)/Sys/EnvExpandOptions.cs" Link="Sys/EnvExpandOptions.cs" />
+    <Compile Include="$(SysDir)/Sys/EnvExpandException.cs" Link="Sys/EnvExpandException.cs" />
+    
+    <Compile Include="$(SysDir)/Text/StringBuilderCache.cs" Link="Text/StringBuilderCache.cs" />
+  </ItemGroup>
+
+
+</Project>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Security.Cryptography.X509Certificates", "src\Gnome.Security.Cryptography.X509Certificates.csproj", "{1011439A-51A9-4A36-91D6-C79CEA059192}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Security.Cryptography.X509Certificates.Tests", "test\Gnome.Security.Cryptography.X509Certificates.Tests.csproj", "{C4807829-E0D3-45BE-B155-F560ACF177F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1011439A-51A9-4A36-91D6-C79CEA059192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1011439A-51A9-4A36-91D6-C79CEA059192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1011439A-51A9-4A36-91D6-C79CEA059192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1011439A-51A9-4A36-91D6-C79CEA059192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4807829-E0D3-45BE-B155-F560ACF177F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4807829-E0D3-45BE-B155-F560ACF177F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4807829-E0D3-45BE-B155-F560ACF177F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4807829-E0D3-45BE-B155-F560ACF177F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

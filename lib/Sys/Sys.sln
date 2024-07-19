@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Sys", "src\Gnome.Sys.csproj", "{CE2C01F9-315F-412C-BCD0-5571B3165389}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Sys.Tests", "test\Gnome.Sys.Tests.csproj", "{DC282A80-A148-45EB-AE17-88C88F9DE46D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE2C01F9-315F-412C-BCD0-5571B3165389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE2C01F9-315F-412C-BCD0-5571B3165389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE2C01F9-315F-412C-BCD0-5571B3165389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE2C01F9-315F-412C-BCD0-5571B3165389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC282A80-A148-45EB-AE17-88C88F9DE46D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC282A80-A148-45EB-AE17-88C88F9DE46D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC282A80-A148-45EB-AE17-88C88F9DE46D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC282A80-A148-45EB-AE17-88C88F9DE46D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

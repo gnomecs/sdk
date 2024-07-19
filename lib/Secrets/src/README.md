@@ -1,0 +1,5 @@
+# Gnome.Secrets
+
+{{ description }}
+
+{{ license }}

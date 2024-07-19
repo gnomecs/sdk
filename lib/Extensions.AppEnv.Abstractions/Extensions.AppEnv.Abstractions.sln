@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Extensions.AppEnv.Abstractions", "src\Gnome.Extensions.AppEnv.Abstractions.csproj", "{CFE7F8C8-598A-4E72-B185-84F13645AFE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Extensions.AppEnv.Abstractions.Tests", "test\Gnome.Extensions.AppEnv.Abstractions.Tests.csproj", "{D2C143D2-48D4-463B-B50C-C8DCF6977A84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFE7F8C8-598A-4E72-B185-84F13645AFE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE7F8C8-598A-4E72-B185-84F13645AFE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE7F8C8-598A-4E72-B185-84F13645AFE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE7F8C8-598A-4E72-B185-84F13645AFE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2C143D2-48D4-463B-B50C-C8DCF6977A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2C143D2-48D4-463B-B50C-C8DCF6977A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2C143D2-48D4-463B-B50C-C8DCF6977A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2C143D2-48D4-463B-B50C-C8DCF6977A84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Sys.Ansi", "src\Gnome.Sys.Ansi.csproj", "{55702362-DE22-4040-87E7-E4216C5A366F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Sys.Ansi.Tests", "test\Gnome.Sys.Ansi.Tests.csproj", "{A90063CB-73E8-4863-94EA-CFAB49364CB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Colors.Primitives", "..\Colors.Primitives\src\Gnome.Colors.Primitives.csproj", "{A211CB27-7492-49B5-812E-C40CD0EB2CFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55702362-DE22-4040-87E7-E4216C5A366F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55702362-DE22-4040-87E7-E4216C5A366F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55702362-DE22-4040-87E7-E4216C5A366F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55702362-DE22-4040-87E7-E4216C5A366F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A90063CB-73E8-4863-94EA-CFAB49364CB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A90063CB-73E8-4863-94EA-CFAB49364CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A90063CB-73E8-4863-94EA-CFAB49364CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A90063CB-73E8-4863-94EA-CFAB49364CB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A211CB27-7492-49B5-812E-C40CD0EB2CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A211CB27-7492-49B5-812E-C40CD0EB2CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A211CB27-7492-49B5-812E-C40CD0EB2CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A211CB27-7492-49B5-812E-C40CD0EB2CFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

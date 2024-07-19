@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">  
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>Gnome.Platforms.OsReleaseInfo</PackageTags>
+    <Description>
+    Gnome.Platforms.OsReleaseInfo
+    </Description>
+    <PackageReleaseNotes Condition="Exists('$(MSBuildProjectDirectory)/CHANGELOG.md')">
+      $([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/CHANGELOG.md"))
+    </PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Condition="Exists('README.md')" Include="README.md" Pack="true" PackagePath="\"/>
+    <None Condition="Exists('LICENSE.md')" Include="LICENSE.md" Pack="true" PackagePath="\"/>
+    <None Condition="Exists('$(IconPath)')" Include="$(IconPath)" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Polyfill" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(NetLegacy)' == 'true'">
+    <PackageReference Include="System.Memory" />
+  </ItemGroup>
+
+  <ItemGroup Condition="Exists('$(InternalDir)')">
+    <Compile Include="$(InternalDir)/Interop/Windows/NtDll/RtlGetVersion.cs" Link="Interop/Windows/NtDll/RtlGetVersion.cs" />
+    <Compile Include="$(InternalDir)/Interop/Windows/Libraries.cs" Link="Interop/Windows/Library.cs" />
+  </ItemGroup>
+
+
+</Project>

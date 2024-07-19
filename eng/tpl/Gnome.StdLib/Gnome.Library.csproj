@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">  
+  <PropertyGroup>
+    <TargetFramework Condition="'$(NoFramework)' == 'false' AND '$(TargetFrameworkOverride)' == '' AND '$(hasFrameworkProp)' == 'false'">net9.0</TargetFramework>
+    <TargetFramework Condition="'$(NoFramework)' == 'false' AND '$(TargetFrameworkOverride)' != '' AND '$(hasFrameworkProp)' == 'false'">TargetFrameworkOverride</TargetFramework>
+    <TargetFrameworks Condition="'$(NoFramework)' == 'false' AND '$(TargetFrameworkOverride)' == '' AND '$(hasFrameworkProp)' == 'true'">$(FrameworkProp)</TargetFrameworks>
+    <RootNamespace Condition="'$(RootNamespaceOverride)' != ''">RootNamespaceOverride</RootNamespace>
+    <RootNamespace Condition="'$(RootNamespaceOverride)' == '' AND '$(name)' != '$(name{-VALUE-FORMS-}safe_namespace)'">Gnome.Library</RootNamespace>
+    <LangVersion Condition="'$(langVersion)' != ''">$(ProjectLanguageVersion)</LangVersion>
+    <ImplicitUsings Condition="'$(csharpFeature_ImplicitUsings)' == 'true'">enable</ImplicitUsings>
+    <Nullable Condition="'$(csharpFeature_Nullable)' == 'true'">enable</Nullable>
+    <!--#if(AllowUnsafe)-->
+    <AllowUnsafeBlocks Condition=''>true</AllowUnsafeBlocks>
+<!--#endif-->
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!--#if(!NoReadme)-->
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <!--#endif-->
+    <PackageTags>Gnome.Library</PackageTags>
+    <Description>
+    Gnome.Library
+    </Description>
+    <!--#if(ChangeLog)-->
+    <PackageReleaseNotes Condition="Exists('$(MSBuildProjectDirectory)/CHANGELOG.md')">
+      $([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/CHANGELOG.md"))
+    </PackageReleaseNotes>
+     <!--#endif-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--#if(!NoReadme)-->
+    <None Condition="Exists('README.md')" Include="README.md" Pack="true" PackagePath="\"/>
+    <!--#endif-->
+    <!--#if(License)-->
+    <None Condition="Exists('LICENSE.md')" Include="LICENSE.md" Pack="true" PackagePath="\"/>
+    <!--#endif-->
+    <!--#if(LicensePath)-->
+    <None Condition="Exists('$(LicensePath)')" Include="$(LicensePath)" Pack="true" PackagePath="\"/>
+    <!--#endif-->
+    <!--#if(IconPath)-->
+    <None Condition="Exists('$(IconPath)')" Include="$(IconPath)" Pack="true" PackagePath="\" />
+    <!--#endif-->
+  </ItemGroup>
+
+  <!--#if(UsePolyfill)-->
+  <ItemGroup>
+    <PackageReference Include="Polyfill" />
+  </ItemGroup>
+  <!--#endif-->
+
+</Project>
