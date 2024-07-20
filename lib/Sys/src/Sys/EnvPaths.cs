@@ -42,7 +42,7 @@ public class EnvPaths : IEnvPaths
     public IEnvPaths Append(string path)
     {
         var pathValue = this.env.Get(this.pathName);
-        var paths = Split(pathValue.GetValueOrDefault(string.Empty));
+        var paths = Split(pathValue);
         if (Has(paths, path))
             return this;
 
@@ -56,7 +56,7 @@ public class EnvPaths : IEnvPaths
     public IEnvPaths Prepend(string path)
     {
         var pathValue = this.env.Get(this.pathName);
-        var paths = Split(pathValue.GetValueOrDefault(string.Empty));
+        var paths = Split(pathValue);
         if (Has(paths, path))
             return this;
 
@@ -71,7 +71,7 @@ public class EnvPaths : IEnvPaths
     public bool Remove(string path)
     {
         var pathValue = this.env.Get(this.pathName);
-        var paths = Split(pathValue.GetValueOrDefault(string.Empty));
+        var paths = Split(pathValue);
         if (!Has(paths, path))
             return false;
 
@@ -85,14 +85,14 @@ public class EnvPaths : IEnvPaths
     public bool Has(string path)
     {
         var pathValue = this.env.Get(this.pathName);
-        var paths = Split(pathValue.GetValueOrDefault(string.Empty));
+        var paths = Split(pathValue);
         return Has(paths, path);
     }
 
     public IEnumerator<string> GetEnumerator()
     {
         var pathValue = this.env.Get(this.pathName);
-        var paths = Split(pathValue.GetValueOrDefault(string.Empty));
+        var paths = Split(pathValue);
         foreach (var path in paths)
             yield return path;
     }

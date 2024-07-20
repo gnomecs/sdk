@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using System.Text.Json.Serialization;
 
 namespace Gnome.Sys;
 
@@ -21,14 +22,18 @@ public class Result<TValue> : IResult<TValue, Error>
         this.IsOk = false;
     }
 
+    [JsonPropertyName("ok")]
     public bool IsOk { get; private set; }
 
+    [JsonIgnore]
     public bool IsError
         => !this.IsOk;
 
+    [JsonPropertyName("value")]
     public TValue Value
         => this.value ?? throw new InvalidOperationException("Result does not have a value.");
 
+    [JsonPropertyName("error")]
     public Error Error
         => this.error ?? throw new InvalidOperationException("Result does not have an error.");
 

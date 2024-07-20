@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace Gnome.Sys;
 
 public class ArgumentError : ExceptionError
@@ -26,6 +28,7 @@ public class ArgumentError : ExceptionError
         this.ParamName = ex.ParamName ?? string.Empty;
     }
 
+    [JsonPropertyName("parameter")]
     public string ParamName { get; set; }
 
     public override Exception ToException()

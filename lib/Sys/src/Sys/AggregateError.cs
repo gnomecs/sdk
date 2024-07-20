@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace Gnome.Sys;
 
 public class AggregateError : ExceptionError
@@ -30,6 +32,7 @@ public class AggregateError : ExceptionError
         this.InnerErrors = ex.InnerExceptions.Select(Convert).ToArray();
     }
 
+    [JsonPropertyName("details")]
     public Error[] InnerErrors { get; set; }
 
     public static implicit operator AggregateError(AggregateException ex)

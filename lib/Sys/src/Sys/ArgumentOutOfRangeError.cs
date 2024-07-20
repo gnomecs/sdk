@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace Gnome.Sys;
 
 public class ArgumentOutOfRangeError : ArgumentError
@@ -36,6 +38,7 @@ public class ArgumentOutOfRangeError : ArgumentError
         this.ActualValue = ex.ActualValue;
     }
 
+    [JsonPropertyName("value")]
     public object? ActualValue { get; set; }
 
     public static implicit operator ArgumentOutOfRangeError(ArgumentOutOfRangeException ex)

@@ -1,7 +1,9 @@
 using System.Runtime.InteropServices;
 
+#if NET5_0_OR_GREATER
 #pragma warning disable CS8981
 using os = System.OperatingSystem;
+#endif
 
 namespace Gnome.Sys;
 
@@ -36,7 +38,7 @@ public static partial class Os
 #else
         if (!IsWindows())
             return false;
-        return IsOSVersionAtLeast(major, minor, build, 0);
+        return InternalIsVersionAtLeast(major, minor, build, 0);
 #endif
     }
 
@@ -49,14 +51,39 @@ public static partial class Os
 #endif
     }
 
-    public static bool IsOSPlatformVersionAtLeast(string platform, int major, int minor = 0, int build = 0, int revision = 0)
+    public static bool IsLinuxVersionAtLeast(int major, int minor = 0, int build = 0, int revision = 0)
+    {
+#if NET5_0_OR_GREATER
+        return os.IsOSPlatformVersionAtLeast("linux", major, minor, build, revision);
+#else
+        if (!IsLinux())
+            return false;
+        return InternalIsVersionAtLeast(major, minor, build, 0);
+#endif
+    }
+
+    public static bool IsVersionAtLeast(string platform, int major, int minor = 0, int build = 0, int revision = 0)
     {
 #if NET5_0_OR_GREATER
         return os.IsOSPlatformVersionAtLeast(platform, major, minor, build, revision);
 #else
-        if (!RuntimeInformation.IsOSPlatform(OSPlatform.Create(platform)))
-            return false;
-        return IsOSVersionAtLeast(major, minor, build, 0);
+        switch (platform)
+        {
+            case "linux":
+                return IsLinuxVersionAtLeast(major, minor, build, revision);
+            case "windows":
+                return IsWindowsVersionAtLeast(major, minor, build, revision);
+            case "osx":
+            case "darwin":
+            case "macos":
+                return IsMacOSVersionAtLeast(major, minor, build);
+            default:
+                {
+                    if (!RuntimeInformation.IsOSPlatform(OSPlatform.Create(platform)))
+                        return false;
+                    return InternalIsVersionAtLeast(major, minor, build, 0);
+                }
+        }
 #endif
     }
 
@@ -76,7 +103,7 @@ public static partial class Os
 #else
         if (!IsMacOS())
             return false;
-        return IsOSVersionAtLeast(major, minor, build, 0);
+        return InternalIsVersionAtLeast(major, minor, build, 0);
 #endif
     }
 
@@ -197,7 +224,7 @@ public static partial class Os
     }
 
 #if !NET5_0_OR_GREATER
-    private static bool IsOSVersionAtLeast(int major, int minor, int build, int revision)
+    private static bool InternalIsVersionAtLeast(int major, int minor, int build, int revision)
     {
         Version current = Environment.OSVersion.Version;
 

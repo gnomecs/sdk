@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace Gnome.Sys;
 
 public class Result : IResult<ValueTuple, Error>
@@ -24,8 +26,10 @@ public class Result : IResult<ValueTuple, Error>
 
     public Error Error => this.IsOk ? throw new InvalidOperationException("Result does not have an error.") : this.error!;
 
+    [JsonPropertyName("ok")]
     public bool IsOk { get; private set; }
 
+    [JsonIgnore]
     public bool IsError
         => !this.IsOk;
 
